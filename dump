@@ -1,0 +1,9 @@
+#
+# Usage: dump [packet_count]
+#
+# If [packet_count] is omitted, 5000 packets will be dumped
+#
+count=5000
+test "$1" !=  "" && count=$1 
+sudo ./dumpcap -ch 0 $count
+sudo ./dumpcap -ch 1 $count
