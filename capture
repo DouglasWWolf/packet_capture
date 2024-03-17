@@ -1,0 +1,11 @@
+# 
+# Usage: "capture [start | stop]".
+#
+# If no parameter is given, "capture start" is assumed
+#
+if [ "$1" == "stop" ]; then
+    pcireg 0x1004 0
+else
+    pcireg 0x1004 1
+fi
+
